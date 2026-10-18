@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="web_bg">#FF12141A</color>
+    <color name="page_bg">#FF12141A</color>
+    <color name="text_primary">#FFE6E6EA</color>
+    <color name="text_secondary">#FF9AA0A6</color>
+    <color name="status_bar">#FF12141A</color>
+    <color name="nav_bar">#FF12141A</color>
+    <color name="icon_tint">#FF9B8CFF</color>
+    <color name="input_bg">#FF1B1E26</color>
+    <color name="input_stroke">#FF333844</color>
+    <color name="input_hint">#FF7C828C</color>
+</resources>

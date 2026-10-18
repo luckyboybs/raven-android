@@ -1,0 +1,14 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures
+.externalNativeBuild
+.cxx
+
+# 本地备份（改前按项目惯例留的 .bak-<date>[.N]，勿入库）
+*.bak-*
+.*.bak-*

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="raven_accent">#6C5CE7</color>
+    <color name="ic_launcher_background">#6C5CE7</color>
+    <color name="progress_line">#6C5CE7</color>
+    <color name="progress_track">#336C5CE7</color>
+    <color name="web_bg">#FFFFFFFF</color>
+    <color name="page_bg">#FFFFFFFF</color>
+    <color name="text_primary">#FF1B1B1F</color>
+    <color name="text_secondary">#FF5F6368</color>
+    <color name="status_bar">#FFF3F3F7</color>
+    <color name="nav_bar">#FFF3F3F7</color>
+    <color name="icon_tint">#FF6C5CE7</color>
+    <color name="input_bg">#FFF6F6F9</color>
+    <color name="input_stroke">#FFD8D8E0</color>
+    <color name="input_hint">#FF8A8F98</color>
+</resources>

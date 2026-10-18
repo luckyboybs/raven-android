@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/web_bg" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="top"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_line"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/errorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/page_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/errorIcon"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="@string/error_title"
+                android:src="@drawable/ic_cloud_off"
+                app:tint="@color/icon_tint"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/errorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/error_title"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.25"
+                android:text="@string/error_message"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/retryButton"
+                style="@style/ButtonRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/error_retry" />
+
+            <Button
+                android:id="@+id/errorLoginButton"
+                style="@style/ButtonGhost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/error_relogin"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/page_bg"
+            android:clickable="true"
+            android:fillViewport="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/login_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.25"
+                    android:text="@string/login_desc"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/loginUrl"
+                    style="@style/LoginInput"
+                    android:layout_marginTop="24dp"
+                    android:hint="@string/login_url"
+                    android:importantForAutofill="no"
+                    android:inputType="textUri" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/login_url_helper"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/loginBasicUser"
+                    style="@style/LoginInput"
+                    android:layout_marginTop="12dp"
+                    android:autofillHints="username"
+                    android:hint="@string/login_basic_user"
+                    android:inputType="text"
+                    android:text="@string/login_default_user" />
+
+                <EditText
+                    android:id="@+id/loginBasicPass"
+                    style="@style/LoginInput"
+                    android:layout_marginTop="12dp"
+                    android:autofillHints="password"
+                    android:hint="@string/login_basic_pass"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/loginToken"
+                    style="@style/LoginInput"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/login_token"
+                    android:importantForAutofill="no"
+                    android:inputType="textVisiblePassword"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/login_token_helper"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/loginNoSaveToken"
+                    style="@style/LoginCheck"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/login_no_save_token" />
+
+                <CheckBox
+                    android:id="@+id/loginShowToken"
+                    style="@style/LoginCheck"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/login_show_token" />
+
+                <Button
+                    android:id="@+id/loginButton"
+                    style="@style/ButtonRetry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/login_submit" />
+
+                <TextView
+                    android:id="@+id/loginStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    tools:text="正在连接网关…" />
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</FrameLayout>
